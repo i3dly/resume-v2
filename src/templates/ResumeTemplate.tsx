@@ -173,8 +173,8 @@ export const ResumeTemplate: ResumeComponent<ResumeTemplateProps> = ({ data, ...
                     </View>
                 </Sidebar>
             </Page>
-            {data.pages.slice(1).map(({ experiences }) => (
-                <Page className="flex flex-row-reverse items-stretch">
+            {data.pages.slice(1).map(({ experiences }, i) => (
+                <Page key={i} className="flex flex-row-reverse items-stretch">
                     <View className="flex grow flex-col items-stretch p-4">
                         <Text
                             className={cn(

@@ -4,6 +4,8 @@ import path from "node:path";
 import { ResumeTemplate } from "../src/templates/ResumeTemplate";
 import { data } from "./data";
 
+console.log("Building resume...");
+
 const OUTDIR = path.resolve(process.cwd(), "./out");
 const OUTFILE = path.resolve(OUTDIR, "./resume.pdf");
 
@@ -11,3 +13,5 @@ const resume = await ResumeTemplate({ data });
 
 fs.ensureDirSync(OUTDIR);
 await render(resume, OUTFILE);
+
+console.log("🎉 Resume built successfully at", OUTFILE);

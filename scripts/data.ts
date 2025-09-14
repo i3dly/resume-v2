@@ -255,6 +255,11 @@ export const data: ResumeData = {
                             file uploads, friend suggestions, real-time chat, notifications,
                             and comments with Nexus + Prisma.
                         `,
+                        oneLine`
+                            Integrated with GitHub's API to fetch and display user profile data,
+                            support (dis)liking profiles and repos, and implementing a search for
+                            users and repos.
+                        `,
                     ],
                 },
                 {
@@ -265,9 +270,8 @@ export const data: ResumeData = {
                     endDate: "03/01/2021",
                     highlights: [
                         oneLine`
-                            Designed in Figma, and created an atomic design system without using any
-                            ui-toolkits, while improving accessibility and minimizing client bundle
-                            size.
+                            Created an atomic design system from scratch, while improving accessibility
+                            and minimizing client bundle size.
                         `,
                         oneLine`
                             Authored an internal charting library with Visx, a data-grid library with
@@ -283,7 +287,7 @@ export const data: ResumeData = {
                             tests.
                         `,
                         oneLine`
-                            Achieved 95-100 on all Google Lighthouse metrics (excluding PWA).
+                            Achieved 95-100 on all Google Lighthouse metrics.
                         `,
                         oneLine`
                             Implemented JWTs with refresh-tokens, blacklists and retries with Redis +
