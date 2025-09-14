@@ -1,0 +1,48 @@
+{
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.workingDirectories": [
+    { "pattern": "./scripts/*/" },
+    { "pattern": "./src/*/" }
+  ],
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "tailwindCSS.experimental.classRegex": [
+      "cva\\(\"([^)]*)\"",
+      "cx\\(([^)]*)\\)",
+      "cn\\(\\s*['\"`]([^'\"]*)['\"`]",
+      "tw`([^`]*)",
+      "tw=\"([^\"]*)",
+      "tw=\\{\\s*['\"`]([^'\"]*)['\"`]",
+      "tw\\.\\w+`([^`]*)",
+      "tw\\(.*?\\)`([^`]*)"
+    ]
+  },
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "tailwindCSS.experimental.classRegex": [
+      "cva\\(\"([^)]*)\"",
+      "cx\\(([^)]*)\\)",
+      "cn\\(\\s*['\"`]([^'\"]*)['\"`]",
+      "tw`([^`]*)",
+      "tw=\"([^\"]*)",
+      "tw=\\{\\s*['\"`]([^'\"]*)['\"`]",
+      "tw\\.\\w+`([^`]*)",
+      "tw\\(.*?\\)`([^`]*)"
+    ]
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript",
+    "typescriptreact": "javascript"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
