@@ -190,6 +190,10 @@ export const data: ResumeData = {
                         `,
                     ],
                 },
+            ],
+        },
+        {
+            experiences: [
                 {
                     company: "Openbase",
                     info: "shut-down",
@@ -226,10 +230,6 @@ export const data: ResumeData = {
                         `,
                     ],
                 },
-            ],
-        },
-        {
-            experiences: [
                 {
                     company: "MakePurple",
                     info: "shut-down",
