@@ -2,7 +2,7 @@ import { oneLine, stripIndents } from "common-tags";
 import type { ResumeData } from "../src/types";
 
 export const data: ResumeData = {
-    link: "https://resume.i3dly.dev",
+    link: "https://github.com/i3dly/resume-v2",
     name: "David Lee",
     jobTitle: "Staff Software Engineer / Engineering Lead",
     github: "i3dly",
@@ -144,6 +144,7 @@ export const data: ResumeData = {
                 "Vitest",
                 "Octokit",
                 "Stripe",
+                "Resend",
                 "Grafana",
             ],
             concepts: ["CRDTs", "Observability", "OTel", "IaC", "Monorepos", "Containerization"],
@@ -171,9 +172,10 @@ export const data: ResumeData = {
                             Objects, and more).
                         `,
                         oneLine`
-                            Created a MacOS binary in Swift to be able to record desktop audio,
-                            stream it to a Durable Object for transcription with AssemblyAI, and
-                            stream the transcript back to the frontend via server-sent events.
+                            Created a MacOS binary in Swift to be able to record desktop audio via
+                            Electron IPC, stream it to a Durable Object for transcription with
+                            AssemblyAI, and stream the transcript back to the frontend via
+                            server-sent events.
                         `,
                         oneLine`
                             Upserted embeddings of transcript turns groupings with conversation
