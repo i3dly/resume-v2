@@ -31,10 +31,10 @@ export const TimelineItem: FC<TimelineItemProps> = ({
     return (
         <View className={cn("flex flex-row items-stretch", className)}>
             <View className="flex flex-col items-center">
-                <View className="z-10 flex items-center h-6 w-6 justify-center rounded-full border border-solid border-indigo-500 bg-indigo-800 text-white">
+                <View className="z-10 flex items-center h-6 w-6 justify-center rounded-full border border-solid border-neutral-700 bg-neutral-900 text-white">
                     <CalendarIcon className="h-3 w-3" height={12} stroke="#ffffff" width={12} />
                 </View>
-                {!isEnd && <View className="grow w-[1px] bg-indigo-800" />}
+                {!isEnd && <View className="grow w-[1px] bg-neutral-700" />}
             </View>
             <View className="ml-3 flex flex-col pb-1.5">
                 <View className="flex flex-row items-center justify-start gap-1.5 h-6 text-base font-medium leading-none">

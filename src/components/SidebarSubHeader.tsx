@@ -9,7 +9,7 @@ export interface SidebarSubHeaderProps {
 
 export const SidebarSubHeader: FC<SidebarSubHeaderProps> = ({ children, className }) => {
     return (
-        <Text className={cn("text-sm font-medium leading-none underline", className)}>
+        <Text className={cn("text-base font-medium leading-none underline", className)}>
             {children}
         </Text>
     );

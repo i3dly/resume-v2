@@ -1,3 +1,4 @@
+import { Font } from "@react-pdf/renderer";
 import { formatHex } from "culori";
 import colors from "tailwindcss/colors";
 
@@ -26,15 +27,40 @@ const pdfColors = Object.entries(colors).reduce((acc, [name, color]) => {
     };
 }, {});
 
-/** @type {import('tailwindcss').Config} */
-const config = {
-    theme: {
-        colors: pdfColors,
-        fontFamily: {
-            sans: ["Roboto"],
-            mono: ["Roboto Mono"],
-        },
-    },
+const fontWeights = {
+    thin: 100,
+    ultralight: 200,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    ultrabold: 800,
+    heavy: 900,
 };
+const createFontWeights = (family) => {
+    return Object.entries(fontWeights).map(([key, weight]) => {
+        return {
+            src: `https://fonts.googleapis.com/css2?family=${family}:wght@${weight}`,
+            fontWeight: weight,
+        };
+    });
+};
+
+/** @type {import('tailwindcss').Config} */
+const config = (() => {
+    Font.register({ family: "Geist", fonts: createFontWeights("Geist") });
+    Font.register({ family: "JetBrains Mono", fonts: createFontWeights("JetBrains Mono") });
+
+    return {
+        theme: {
+            colors: pdfColors,
+            fontFamily: {
+                sans: ["Geist"],
+                mono: ["JetBrains Mono"],
+            },
+        },
+    };
+})();
 
 export default config;

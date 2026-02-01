@@ -34,10 +34,22 @@ export interface ResumeData {
     skills: {
         languages: readonly string[];
         frameworks: readonly string[];
-        frontend: readonly string[];
-        backend: readonly string[];
-        tooling: readonly string[];
-        concepts: readonly string[];
+        frontend: {
+            tools: readonly string[];
+            concepts: readonly string[];
+        };
+        backend: {
+            tools: readonly string[];
+            concepts: readonly string[];
+        };
+        ai: {
+            tools: readonly string[];
+            concepts: readonly string[];
+        };
+        misc: {
+            tools: readonly string[];
+            concepts: readonly string[];
+        };
     };
     pages: readonly ResumePage[];
     education: ResumeEducation;

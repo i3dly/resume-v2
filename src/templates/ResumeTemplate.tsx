@@ -1,5 +1,6 @@
 import { Avatar } from "../components/Avatar";
 import { BulletedList } from "../components/BulletedList";
+import { CommaList } from "../components/CommaList";
 import { Document } from "../components/Document";
 import { Page } from "../components/Page";
 import { ResumeLink } from "../components/ResumeLink";
@@ -7,6 +8,7 @@ import { Sidebar } from "../components/Sidebar";
 import { SidebarDivider } from "../components/SideBarDivider";
 import { SidebarHeader } from "../components/SidebarHeader";
 import { SidebarSubHeader } from "../components/SidebarSubHeader";
+import { SkillsCard } from "../components/SkillsCard";
 import { SocialLink } from "../components/SocialLink";
 import { Text } from "../components/Text";
 import { Timeline } from "../components/Timeline";
@@ -121,7 +123,7 @@ export const ResumeTemplate: ResumeComponent<ResumeTemplateProps> = ({ data, ...
                 <Sidebar className={cn("flex w-64 shrink-0 flex-col p-4")}>
                     <View>
                         <SidebarHeader>Summary</SidebarHeader>
-                        <View className="mt-3 flex flex-col text-xs leading-snug">
+                        <View className="flex flex-col text-xs leading-snug">
                             {data.summary.split(/\n+/g).map((paragraph, i) => (
                                 <Text key={i} className={cn("text-sm", !!i && "mt-2")}>
                                     {paragraph}
@@ -133,29 +135,37 @@ export const ResumeTemplate: ResumeComponent<ResumeTemplateProps> = ({ data, ...
                     <View className="grow mt-4">
                         <SidebarHeader>Skills</SidebarHeader>
                         <View className="flex flex-col">
-                            <View className="text-xs leading-snug">
-                                <SidebarSubHeader>Languages</SidebarSubHeader>
-                                <Text className="mt-2 text-sm">
-                                    {data.skills.languages.join(", ")}
-                                </Text>
-                            </View>
-                            <View className="mt-3 text-xs leading-snug">
-                                <SidebarSubHeader>Frameworks</SidebarSubHeader>
-                                <Text className="mt-2 text-sm">
-                                    {data.skills.frameworks.join(", ")}
-                                </Text>
-                            </View>
+                            <SkillsCard items={data.skills.languages} title="Languages" />
+                            <SkillsCard
+                                className="mt-1"
+                                items={data.skills.frameworks}
+                                title="Frameworks"
+                            />
                             <View className="mt-3 text-xs leading-snug">
                                 <SidebarSubHeader>Frontend</SidebarSubHeader>
-                                <Text className="mt-2 text-sm">
-                                    {data.skills.frontend.join(", ")}
-                                </Text>
+                                <SkillsCard
+                                    className="mt-2"
+                                    items={data.skills.frontend.tools}
+                                    title="Tools"
+                                />
+                                <SkillsCard
+                                    className="mt-1"
+                                    items={data.skills.frontend.concepts}
+                                    title="Concepts"
+                                />
                             </View>
                             <View className="mt-3 text-xs leading-snug">
                                 <SidebarSubHeader>Backend</SidebarSubHeader>
-                                <Text className="mt-2 text-sm">
-                                    {data.skills.backend.join(", ")}
-                                </Text>
+                                <SkillsCard
+                                    className="mt-2"
+                                    items={data.skills.backend.tools}
+                                    title="Tools"
+                                />
+                                <SkillsCard
+                                    className="mt-1"
+                                    items={data.skills.backend.concepts}
+                                    title="Concepts"
+                                />
                             </View>
                         </View>
                     </View>
@@ -200,22 +210,36 @@ export const ResumeTemplate: ResumeComponent<ResumeTemplateProps> = ({ data, ...
                         </Timeline>
                     </View>
                     <Sidebar className={cn("flex w-64 shrink-0 flex-col p-4")}>
-                        <View className="grow mt-4">
+                        <View className="grow">
                             <SidebarHeader>
                                 Skills <Text className="text-xs">(continued)</Text>
                             </SidebarHeader>
                             <View className="flex flex-col">
-                                <View className="mt-3 text-xs leading-snug">
-                                    <SidebarSubHeader>Tooling + Services</SidebarSubHeader>
-                                    <Text className="mt-2 text-sm">
-                                        {data.skills.tooling.join(", ")}
-                                    </Text>
+                                <View className="text-xs leading-snug">
+                                    <SidebarSubHeader>AI</SidebarSubHeader>
+                                    <SkillsCard
+                                        className="mt-2"
+                                        items={data.skills.ai.tools}
+                                        title="Tools"
+                                    />
+                                    <SkillsCard
+                                        className="mt-1"
+                                        items={data.skills.ai.concepts}
+                                        title="Concepts"
+                                    />
                                 </View>
                                 <View className="mt-3 text-xs leading-snug">
-                                    <SidebarSubHeader>Concepts + Misc.</SidebarSubHeader>
-                                    <Text className="mt-2 text-sm">
-                                        {data.skills.concepts.join(", ")}
-                                    </Text>
+                                    <SidebarSubHeader>Misc.</SidebarSubHeader>
+                                    <SkillsCard
+                                        className="mt-2"
+                                        items={data.skills.misc.tools}
+                                        title="Tools"
+                                    />
+                                    <SkillsCard
+                                        className="mt-1"
+                                        items={data.skills.misc.concepts}
+                                        title="Concepts"
+                                    />
                                 </View>
                             </View>
                         </View>

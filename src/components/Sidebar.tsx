@@ -8,5 +8,5 @@ export interface SidebarProps {
 }
 
 export const Sidebar: FC<SidebarProps> = ({ children, className }) => {
-    return <View className={cn("bg-indigo-800 text-gray-50", className)}>{children}</View>;
+    return <View className={cn("bg-neutral-900 text-gray-50", className)}>{children}</View>;
 };
