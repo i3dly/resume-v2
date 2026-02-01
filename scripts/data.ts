@@ -29,7 +29,7 @@ export const data: ResumeData = {
 	`,
     skills: {
         languages: ["TypeScript", "JavaScript"],
-        frameworks: ["Next.js", "Remix", "Nest.js"],
+        frameworks: ["Tanstack Start", "Next.js", "Remix", "Nest.js"],
         frontend: [
             "HTML5",
             "CSS3",
@@ -127,6 +127,34 @@ export const data: ResumeData = {
         {
             experiences: [
                 {
+                    company: "svall.ai",
+                    jobTitle: "Founder",
+                    startDate: "08/01/2025",
+                    endDate: null,
+                    highlights: [
+                        oneLine`
+                            Built a hybrid web and desktop app for deriving context from meetings
+                            (using Tanstack Start, Electron, Tanstack DB, Tanstack AI, AI SDK,
+                            Mastra, Elysia, Drizzle, Cloudflare Workflows, Vectorize, Durable
+                            Objects, and more).
+                        `,
+                        oneLine`
+                            Created a MacOS binary in Swift to be able to record desktop audio,
+                            stream it to a Durable Object for transcription with AssemblyAI, and
+                            stream the transcript back to the frontend via server-sent events.
+                        `,
+                        oneLine`
+                            Upserted embeddings of transcript turns, database entities, and notes
+                            to Vectorize for document retrieval with cosine similarity.
+                        `,
+                        oneLine`
+                            Created durable execution workflows—properly handling idempotency
+                            and retries—to update database entries and embeddings, generate LLM
+                            responses and push websocket messages to the frontend.
+                        `,
+                    ],
+                },
+                {
                     company: "pluv.io",
                     jobTitle: "Founder",
                     startDate: "08/01/2022",
@@ -149,8 +177,9 @@ export const data: ResumeData = {
                             distributed Node.js servers and Cloudflare Workers.
                         `,
                         oneLine`
-                            Pivoted to a real-time API SaaS, by generating secure API keys and
-                            tracking billable usage with Cloudflare Analytics Engine.
+                            Pivoted to a real-time API SaaS, by generating secure API keys encoded
+                            with PBKDF2:SHA256 and tracking billable usage with Cloudflare Analytics
+                            Engine.
                         `,
                         oneLine`
                             Did developer outreach, product development and marketing to create
@@ -160,9 +189,9 @@ export const data: ResumeData = {
                 },
                 {
                     company: "KarmaSuite",
-                    jobTitle: "Staff Engineer / Engineering Lead",
+                    jobTitle: "(Founding) Staff Engineer / Engineering Lead",
                     startDate: "03/27/2023",
-                    endDate: null,
+                    endDate: "02/01/2025",
                     highlights: [
                         oneLine`
                             Architected and built the bulk of the initial KarmaSuite application as

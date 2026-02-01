@@ -2,6 +2,7 @@ import type { PageProps as PdfPageProps } from "@react-pdf/renderer";
 import { Page as PdfPage } from "@react-pdf/renderer";
 import { useMemo, type FC, type ReactNode } from "react";
 import { useTailwind } from "../hooks/useTailwind";
+import { cn } from "../lib/cn";
 
 export type PageProps = PdfPageProps & {
     children?: ReactNode;
@@ -19,7 +20,7 @@ export const Page: FC<PageProps> = ({
 }) => {
     const { tw } = useTailwind();
 
-    const twStyle = useMemo(() => tw(className), [className, tw]);
+    const twStyle = useMemo(() => tw(cn("overflow-hidden", className)), [className, tw]);
 
     return (
         <PdfPage

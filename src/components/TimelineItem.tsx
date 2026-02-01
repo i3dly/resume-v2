@@ -36,7 +36,7 @@ export const TimelineItem: FC<TimelineItemProps> = ({
                 </View>
                 {!isEnd && <View className="grow w-[1px] bg-indigo-800" />}
             </View>
-            <View className="ml-3 flex flex-col pb-2">
+            <View className="ml-3 flex flex-col pb-1.5">
                 <View className="flex flex-row items-center justify-start gap-1.5 h-6 text-base font-medium leading-none">
                     <Text className="text-base font-medium leading-none">{title}</Text>
                     {!!info && <Text className="text-xs font-normal">({info})</Text>}

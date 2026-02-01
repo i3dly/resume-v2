@@ -91,7 +91,7 @@ export const ResumeTemplate: ResumeComponent<ResumeTemplateProps> = ({ data, ...
                         >
                             Professional Experience
                         </Text>
-                        <Timeline className="grow w-full mt-4">
+                        <Timeline className="grow w-full mt-2">
                             {data.pages[0]?.experiences.map((experience, i) => (
                                 <TimelineItem
                                     key={i}
@@ -157,18 +157,6 @@ export const ResumeTemplate: ResumeComponent<ResumeTemplateProps> = ({ data, ...
                                     {data.skills.backend.join(", ")}
                                 </Text>
                             </View>
-                            <View className="mt-3 text-xs leading-snug">
-                                <SidebarSubHeader>Tooling + Services</SidebarSubHeader>
-                                <Text className="mt-2 text-sm">
-                                    {data.skills.tooling.join(", ")}
-                                </Text>
-                            </View>
-                            <View className="mt-3 text-xs leading-snug">
-                                <SidebarSubHeader>Concepts + Misc.</SidebarSubHeader>
-                                <Text className="mt-2 text-sm">
-                                    {data.skills.concepts.join(", ")}
-                                </Text>
-                            </View>
                         </View>
                     </View>
                 </Sidebar>
@@ -185,7 +173,7 @@ export const ResumeTemplate: ResumeComponent<ResumeTemplateProps> = ({ data, ...
                         >
                             Professional Experience
                         </Text>
-                        <Timeline className="grow w-full mt-4">
+                        <Timeline className="grow w-full mt-2">
                             {experiences.map((experience, i) => (
                                 <TimelineItem
                                     key={i}
@@ -212,6 +200,25 @@ export const ResumeTemplate: ResumeComponent<ResumeTemplateProps> = ({ data, ...
                         </Timeline>
                     </View>
                     <Sidebar className={cn("flex w-64 shrink-0 flex-col p-4")}>
+                        <View className="grow mt-4">
+                            <SidebarHeader>
+                                Skills <Text className="text-xs">(continued)</Text>
+                            </SidebarHeader>
+                            <View className="flex flex-col">
+                                <View className="mt-3 text-xs leading-snug">
+                                    <SidebarSubHeader>Tooling + Services</SidebarSubHeader>
+                                    <Text className="mt-2 text-sm">
+                                        {data.skills.tooling.join(", ")}
+                                    </Text>
+                                </View>
+                                <View className="mt-3 text-xs leading-snug">
+                                    <SidebarSubHeader>Concepts + Misc.</SidebarSubHeader>
+                                    <Text className="mt-2 text-sm">
+                                        {data.skills.concepts.join(", ")}
+                                    </Text>
+                                </View>
+                            </View>
+                        </View>
                         {!!data.link && <ResumeLink className="mt-4" link={data.link} />}
                     </Sidebar>
                 </Page>
