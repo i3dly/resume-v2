@@ -242,10 +242,10 @@ export const data: ResumeData = {
                             tasks.
                         `,
                         oneLine`
-                            Invented a highly performant algorithm to allocate tens of thousands
+                            Designed a performant durable workflow to allocate tens of thousands
                             of expenses to restricted funding sources that minimizes wasted dollars
-                            for non-profits using partitioning, set theory and hot-swappable heuristics
-                            for an A* algorithm.
+                            for non-profits using partitioning, set theory and A* with swappable
+                            heuristics (using Inngest).
                         `,
                         oneLine`
                             Created and reviewed numerous PRDs, RFCs and TADs for the engineering org.
