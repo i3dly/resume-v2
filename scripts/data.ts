@@ -18,7 +18,7 @@ export const data: ResumeData = {
 			in software and product development.
 		`}
 		${oneLine`
-			Advanced expertise in TypeScript and Node.js, with experience across frontend,
+			Advanced expertise in TypeScript, with experience across frontend,
             backend, AI and infra.
 		`}
 		${oneLine`
@@ -29,7 +29,7 @@ export const data: ResumeData = {
 	`,
     skills: {
         languages: ["TypeScript", "JavaScript"],
-        frameworks: ["Tanstack Start", "Next.js"],
+        frameworks: ["Tanstack Start", "Next.js", "Remix"],
         frontend: {
             tools: [
                 "HTML5",
@@ -43,6 +43,7 @@ export const data: ResumeData = {
                 "Apollo Client",
                 "Tanstack DB",
                 "Tanstack Router",
+                "Tanstack Table",
                 "Storybook",
                 "Electron",
                 "Recharts",
@@ -75,9 +76,9 @@ export const data: ResumeData = {
                 "Redis",
                 "Pothos",
                 "GraphQL Yoga",
+                "tRPC",
                 "Socket.io",
                 "pluv.io",
-                "tRPC",
                 "Lucia",
                 "OpenAuth",
             ],
@@ -113,13 +114,15 @@ export const data: ResumeData = {
                 "Inngest",
             ],
             concepts: [
-                "Semantic search",
-                "Embedding",
+                "Context window",
+                "Few shot",
                 "RAG",
+                "Embedding",
+                "Token management",
                 "Durable execution",
                 "Idempotency",
-                "Context window",
-                "Token management",
+                "Semantic search",
+                "CoT",
             ],
         },
         misc: {
@@ -191,6 +194,7 @@ export const data: ResumeData = {
                 },
                 {
                     company: "pluv.io",
+                    info: "open-source",
                     jobTitle: "Founder",
                     startDate: "08/01/2022",
                     endDate: null,
@@ -223,7 +227,7 @@ export const data: ResumeData = {
                     ],
                 },
                 {
-                    company: "KarmaSuite",
+                    company: "KarmaSuite (Fractal W22)",
                     jobTitle: "(Founding) Staff Engineer / Engineering Lead",
                     startDate: "03/27/2023",
                     endDate: "02/01/2025",
@@ -259,7 +263,7 @@ export const data: ResumeData = {
         {
             experiences: [
                 {
-                    company: "Openbase",
+                    company: "Openbase (YC S20)",
                     info: "shut-down",
                     jobTitle: "Staff Frontend Engineer",
                     startDate: "04/01/2021",
