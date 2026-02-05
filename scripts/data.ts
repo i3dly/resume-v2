@@ -44,9 +44,11 @@ export const data: ResumeData = {
                 "Tanstack DB",
                 "Tanstack Router",
                 "Tanstack Table",
+                "React-Hook-Form",
                 "Storybook",
-                "Electron",
                 "Recharts",
+                "Zustand",
+                "Electron",
             ],
             concepts: [
                 "SEO",
